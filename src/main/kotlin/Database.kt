@@ -13,7 +13,7 @@ val connectOptions = MySQLConnectOptions()
     .setHost("10.0.0.123")
     .setDatabase("Zeitmanagement")
     .setUser("timemanagement")
-    .setPassword("t8EU#aNtHxGK^%")
+    .setPassword("")
 
 val poolOptions = PoolOptions().setMaxSize(5)
 val client = MySQLPool.pool(vertx, connectOptions, poolOptions)
