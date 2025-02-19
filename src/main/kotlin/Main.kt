@@ -121,9 +121,7 @@ fun main() {
             val deploymentId = vertx.deployVerticle(MainVerticle()).coAwait()
             println("Verticle erfolgreich deployt: $deploymentId")
 
-            // Entfernen des Shutdown Hooks, der den Server automatisch beendet
             Runtime.getRuntime().addShutdownHook(Thread {
-                // Hier keinen vertx.close() Aufruf machen
                 println("Das Programm wurde beendet.")
             })
         } catch (e: Exception) {
